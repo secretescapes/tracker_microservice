@@ -1,0 +1,31 @@
+# Project build files.
+*cobertura.ser
+*bin
+target/
+*out
+*plugin.xml
+*.log
+node_modules
+*.war
+*.codekit
+*.css.map
+
+# IntelliJ IDEA project files.
+apps/cms/.idea
+.idea
+.slcache
+*.iml
+*.ipr
+*.iws
+*.ids
+#idea database connection
+.ideaDataSources/
+
+# Library description files
+*.tld
+
+# Hidden osx files
+.DS_Store
+
+#Python compiled classes
+*.pyc
