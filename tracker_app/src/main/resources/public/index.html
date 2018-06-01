@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="startRequest" onclick="startRequest()">
+	<p>Start Request</p>
+</div>
+<script>
+	$(document).ready(function(){
+	});
+	function startRequest() {
+		$.ajax({
+			url: "http://localhost:7070/ping",
+			success:function(data) {console.log("OK!!!!!")},
+			dataType: 'json'
+		});
+	}
+	
+</script>
+</body>
+</html>
