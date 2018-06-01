@@ -2,14 +2,12 @@ package com.secretescapes.tracker.domains;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.Date;
 import java.util.HashMap;
 
-@Document(collection = "event")
-@JsonIgnoreProperties(value = {"c", "calendar"}, allowGetters = true)
+@JsonIgnoreProperties(value = {"c", "date"}, allowGetters = true)
 public class Event {
 
 	@Field("t")
@@ -36,14 +34,14 @@ public class Event {
 
 	@Field("c")
 	@JsonProperty("c")
-	private Date calendar = new Date();
+	private Date date = new Date();
 
-	public Date getCalendar() {
-		return calendar;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setCalendar(Date calendar) {
-		this.calendar = calendar;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public Au getTr() {
